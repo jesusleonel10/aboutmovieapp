@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function ItemSlider({id, mediatype, title, overview, poster, backdrop, setMedia, setId, setModal}) {
@@ -14,13 +15,13 @@ export default function ItemSlider({id, mediatype, title, overview, poster, back
           url={`https://image.tmdb.org/t/p/w1280${backdrop}`}
           className='slider-container__item'
           style={
-              {backgroundImage: `url('https://image.tmdb.org/t/p/w154${poster}')`}
+              {backgroundImage: `url('https://image.tmdb.org/t/p/w500${poster}')`}
           }
       >
           <div className='slider-container__content'>
               <h2>{title}</h2>
               <p>{overview}</p>
-              <button onClick={() => handleClick(id, true, mediatype)} >Ver mas</button>
+              <Link href={`/${mediatype}/${id}`} className="see-more">Ver mas</Link>
           </div>
       </Item>
     </>

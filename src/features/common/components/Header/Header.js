@@ -12,7 +12,11 @@ export default function Header() {
     <header className="header">
         <div className="logo-menu">
         <div className="logo">
-            <h1>About Movie</h1>
+            <h1>
+                <Link href="/">
+                    About Movie
+                </Link>
+            </h1>
         </div>
         
         <div id="button-menu" className={`button-menu ${isOpen && 'open'}`} onClick={() => setIsOpen(!isOpen)}>
@@ -24,8 +28,8 @@ export default function Header() {
         <div id="sidebar" className={`sidebar ${isOpen && 'sidebar--open'}`}>
             <ul>
                 <li><Link href="/" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Inicio</Link></li>
-                <li><Link href="/movies" className="sidebar__items" data-link='movie' onClick={() => setIsOpen(!isOpen)}>Películas</Link></li>
-                <li><Link href="/tv-shows" className="sidebar__items" data-link='tv' onClick={() => setIsOpen(!isOpen)}>Series de TV</Link></li>
+                <li><Link href="/movie" className="sidebar__items" data-link='movie' onClick={() => setIsOpen(!isOpen)}>Películas</Link></li>
+                <li><Link href="/tv" className="sidebar__items" data-link='tv' onClick={() => setIsOpen(!isOpen)}>Series de TV</Link></li>
                 <li><Link href="/acerca-de" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Acerca de</Link></li>
             </ul>
         </div>
@@ -35,13 +39,13 @@ export default function Header() {
                 className="menu__items"
                 >Inicio
             </Link>
-            <Link href="/movies" 
+            <Link href="/movie" 
                 className="menu__items" 
                 data-link='movie' 
                 >Películas
             </Link>
             
-            <Link href="/tv-shows" 
+            <Link href="/tv" 
                 className="menu__items" 
                 data-link='tv' 
                 >Series de TV

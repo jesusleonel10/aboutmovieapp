@@ -1,0 +1,42 @@
+.container-modal__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin: 1rem;
+    background: #fff;
+    border-radius: .3125rem;
+    box-shadow: rgba(100,100,111, 0.2) 0px 7px 29px 0px;
+    padding: 1.25rem;
+  
+    .poster {
+      max-width: 20rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        max-width: 25rem;
+        gap: .5rem;
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            gap: .7rem;
+        }
+        .release {
+            display: flex;
+            gap: .5rem;
+        }
+        .genres {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: .5rem;
+            
+        }
+    }
+}

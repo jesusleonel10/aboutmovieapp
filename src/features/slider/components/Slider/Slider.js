@@ -1,31 +1,26 @@
 "use client"
 
-import {useState, useEffect} from 'react';
-import Modal from '@/features/common/components/Modal/Modal';
 import ItemSlider from '../ItemSlider/ItemSlider';
 import './Slider.scss'
 
 export default function Slider({trending}) {
-  const [modal, setModal] = useState(false);
-  const [id, setId] = useState('');
-  const [media, setMedia] = useState('');
-  const [timeWindow, setTimeWindow] = useState('day');
+  // const [timeWindow, setTimeWindow] = useState('day');
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const btnTrending = () => {
-      const btnDay = document.getElementById('day')
-      const btnWeek = document.getElementById('week')
+  //   const btnTrending = () => {
+  //     const btnDay = document.getElementById('day')
+  //     const btnWeek = document.getElementById('week')
 
-      if(timeWindow === 'day') {
-        btnDay.classList.add('btn-trending-active')
-      } else if (timeWindow === 'week') {
-        btnWeek.classList.add('btn-trending-active')
-      }
+  //     if(timeWindow === 'day') {
+  //       btnDay.classList.add('btn-trending-active')
+  //     } else if (timeWindow === 'week') {
+  //       btnWeek.classList.add('btn-trending-active')
+  //     }
 
-    }
-    btnTrending()
-  }, [timeWindow])
+  //   }
+  //   btnTrending()
+  // }, [timeWindow])
 
   const activate = (e) => {
     const slider = document.querySelector('.slider-container__carousel');
@@ -52,9 +47,9 @@ export default function Slider({trending}) {
     <>
       <div className='slider-container'>
         <div className='slider-container__title'>
-          <h3>En Tendencia</h3>
-            <button className='btntrend' id='day' value='day' onClick={(e) => changeTrending(e)}>Hoy</button>
-            <button className='btntrend' id='week' value='week' onClick={(e) => changeTrending(e)}>Esta semana</button>
+          <h3>¡Tendencias de esta semana!</h3>
+            {/* <button className='btntrend' id='day' value='day' onClick={(e) => changeTrending(e)}>Hoy</button> */}
+            {/* <button className='btntrend' id='week' value='week' onClick={(e) => changeTrending(e)}>Esta semana</button> */}
         </div>
       <ul className='slider-container__carousel'>
       {
@@ -67,9 +62,6 @@ export default function Slider({trending}) {
               overview={item.overview}
               poster={item.poster_path}
               backdrop={item.backdrop_path}
-              setMedia={setMedia}
-              setId={setId}
-              setModal={setModal}
           />
          })      
         }
@@ -83,16 +75,17 @@ export default function Slider({trending}) {
         </button>
       </nav>
   </div>
-    {
+    {/* {
       modal &&
         <Modal header='Información' modal={modal} setModal={setModal}>   
-            {/* <Info 
+            <Info 
               id={id}
               media={media}
               type={media}
-            /> */}
+            >
+            </Info>
         </Modal>
-    }
+    } */}
     </>
   )
 }
