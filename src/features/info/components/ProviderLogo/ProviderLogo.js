@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Provider({logo, classname}) {
+export default function ProviderLogo({logo, classname}) {
   return (
     <>
         {

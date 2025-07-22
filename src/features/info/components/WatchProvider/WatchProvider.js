@@ -1,5 +1,5 @@
-import Provider from '@/features/common/components/Provider/Provider';
-import ScrollingWidget from '@/features/common/components/ScrollingWidget/ScrollingWidget';
+import ProviderLogo from '@/features/info/components/ProviderLogo/ProviderLogo';
+import ScrollingWidget from '@/features/info/components/ScrollingWidget/ScrollingWidget';
 import './WatchProvider.scss';
 
 export default function WatchProvider({providers}) {
@@ -48,7 +48,7 @@ export default function WatchProvider({providers}) {
                 idWidget='provider-streaming'
                 >
                 {data && data.regionProvider.flatrate.map((item, index) => {
-                          return <Provider 
+                          return <ProviderLogo 
                           key={index}
                           logo={item.logo_path}
                           classname={'item-scrolling'}
@@ -67,7 +67,7 @@ export default function WatchProvider({providers}) {
 
         >
           {data && data.regionProvider.rent.map((item, index) => {
-                    return <Provider 
+                    return <ProviderLogo 
                     key={index}
                     logo={item.logo_path}
                     classname={'item-scrolling'}
@@ -86,7 +86,7 @@ export default function WatchProvider({providers}) {
 
         >
           {data && data.regionProvider.buy.map((item, index) => {
-                    return <Provider 
+                    return <ProviderLogo 
                     key={index}
                     logo={item.logo_path}
                     classname={'item-scrolling'}
@@ -105,7 +105,7 @@ export default function WatchProvider({providers}) {
           flag={false}
           idWidget='provider-null'
         >
-          <Provider />
+          <ProviderLogo />
         </ScrollingWidget>
         }
     </div>     

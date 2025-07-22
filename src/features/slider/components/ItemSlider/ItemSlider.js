@@ -1,14 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function ItemSlider({id, mediatype, title, overview, poster, backdrop, setMedia, setId, setModal}) {
-  
-  const handleClick = (id, modal, mediatype) => {
-    setModal(modal)
-    setId(id)
-    setMedia(mediatype)
-  }
-  
+export default function ItemSlider({id, mediatype, title, overview, poster, backdrop}) {
+
   return (
     <>
       <Item

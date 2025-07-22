@@ -1,5 +1,5 @@
-import ScrollingWidget from "@/features/common/components/ScrollingWidget/ScrollingWidget";
-import CardProfile from "@/features/common/components/CardProfile/CardProfile";
+import ScrollingWidget from "@/features/info/components/ScrollingWidget/ScrollingWidget";
+import CardProfile from "@/features/info/components/CardProfile/CardProfile";
 
 export default function Credits({credits, media}) {
   console.log(credits.crew)

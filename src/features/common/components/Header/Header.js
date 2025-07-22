@@ -28,8 +28,8 @@ export default function Header() {
         <div id="sidebar" className={`sidebar ${isOpen && 'sidebar--open'}`}>
             <ul>
                 <li><Link href="/" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Inicio</Link></li>
-                <li><Link href="/movie" className="sidebar__items" data-link='movie' onClick={() => setIsOpen(!isOpen)}>Películas</Link></li>
-                <li><Link href="/tv" className="sidebar__items" data-link='tv' onClick={() => setIsOpen(!isOpen)}>Series de TV</Link></li>
+                <li><Link href="/movie/list" className="sidebar__items" data-link='movie' onClick={() => setIsOpen(!isOpen)}>Películas</Link></li>
+                <li><Link href="/tv/list" className="sidebar__items" data-link='tv' onClick={() => setIsOpen(!isOpen)}>Series</Link></li>
                 <li><Link href="/acerca-de" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Acerca de</Link></li>
             </ul>
         </div>
@@ -39,16 +39,16 @@ export default function Header() {
                 className="menu__items"
                 >Inicio
             </Link>
-            <Link href="/movie" 
+            <Link href="/movie/list" 
                 className="menu__items" 
                 data-link='movie' 
                 >Películas
             </Link>
             
-            <Link href="/tv" 
+            <Link href="/tv/list" 
                 className="menu__items" 
                 data-link='tv' 
-                >Series de TV
+                >Series
             </Link>
             <Link href="/acerca-de"
                 className="menu__items"

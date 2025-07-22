@@ -12,7 +12,7 @@ async function fetchDetails(url) {
 }
 
 export default async function MovieInfo({params}) {
-  const {movieId} = await params;
+  const { movieId } = await params;
   const data = await fetchDetails(`/movie/${movieId}?language=es-MX`);
   const credits = await fetchDetails(`/movie/${movieId}/credits?language=es-MX`);
   const providers = await fetchDetails(`/movie/${movieId}/watch/providers`);
