@@ -13,6 +13,7 @@
   .container-scrolling {
     width: 100%;
     // min-width: 20rem;
+    // max-width: 40rem;
     margin-bottom: 1rem;
     padding: .5rem;
     border-radius: .5rem;
@@ -120,7 +121,7 @@
   .items-scrolling {
     display: flex;
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 1rem .5rem;
     width: 100%;
     flex-direction: row;
     overflow: auto;

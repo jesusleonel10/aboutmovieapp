@@ -1,7 +1,8 @@
 import { fetchData } from '@/lib/data';
 import MovieTVShow from '@/features/info/components/MovieTVShow/MovieTVShow';
-import '@/styles/info.scss'
+import '@/styles/info.scss';
 
+//Funcion para realizar la consulta, esto se hace en el servidor
 async function fetchDetails(url) {
   try {
     const response = await fetchData(url);
@@ -12,7 +13,7 @@ async function fetchDetails(url) {
 }
 
 export default async function MovieInfo({params}) {
-  const {tvId} = await params;
+  const { tvId } = await params;
   const data = await fetchDetails(`/tv/${tvId}?language=es-MX`);
   const credits = await fetchDetails(`/tv/${tvId}/credits?language=es-MX`);
   const providers = await fetchDetails(`/tv/${tvId}/watch/providers`);

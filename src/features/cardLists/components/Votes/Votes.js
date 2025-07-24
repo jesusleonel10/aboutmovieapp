@@ -6,7 +6,7 @@ import {
   faFaceMeh,
   faFaceSmile,
   faFaceLaughBeam,
-  faFaceGrinStars
+  faFaceGrinStars,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Votes(props) {

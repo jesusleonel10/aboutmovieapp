@@ -26,6 +26,21 @@
         }
     }
 
+    &__without-poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .3125rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 150%; /* (3 / 2) * 100% */
+        }
+    }
+
+    
+
     &__details {
         position: absolute;
         bottom: -100%;
@@ -86,6 +101,12 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         font-size: .8em;
+        opacity: .8;
+    }
+
+    li {
+        list-style: none;
+        font-size: 1em;
         opacity: .8;
     }
   }

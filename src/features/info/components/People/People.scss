@@ -1,6 +1,7 @@
 .container-modal__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-items: center;
     gap: 2rem;
     margin: 1rem;
     background: #fff;
@@ -10,7 +11,6 @@
   
     .poster {
       max-width: 20rem;
-      justify-self: center;
     }
     @media (max-width: 768px) {
       font-size: 14px;
@@ -19,7 +19,6 @@
     .details {
         display: flex;
         flex-direction: column;
-        justify-self: center;
         // max-width: 25rem;
         gap: .5rem;
         .title {
@@ -41,11 +40,33 @@
             
         }
     }
-    .widgets {
+
+    .filmography {
         width: 100%;
         @media (min-width: 744px) and (max-width: 1096px) {
             grid-column-start: 1;
             grid-column-end: -1;
         }
-    }
+        &__title {
+            margin-bottom: .7rem;
+        }
+        &__list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            ul {
+                background-color: #fff;
+                height: 100vh;
+                // max-height: 23rem;
+                overflow: hidden;
+                overflow-y: scroll;
+                li:nth-child(even) {
+                background-color: #f0f0f0;
+                }
+            }
+        }
+}
 }

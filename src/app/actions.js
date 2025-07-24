@@ -9,7 +9,7 @@ export async function fetchDataList(url) {
   //Hago la consulta, llamando a la funcion previamente hecha
   try {
     const response = await fetchData(url);
-    return { list: response };
+    return { list: response, url: url };
   } catch (error) {
     console.log(error);
     return { error: "Ocurrio un error al consultar la lista" };

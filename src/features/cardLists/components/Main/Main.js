@@ -24,11 +24,12 @@ export default function Main({categoryMenu, media}) {
       try {
         setLoading(true);
         setList('');
-        const data = await fetchDataList(`https://api.themoviedb.org/3/${media}/${category}?language=es-MX&page=${page}`)
+        const data = await fetchDataList(`/${media}/${category}?language=es-MX&page=${page}`)
         if (data.error) {
           setError(data.error);
         } else {
           setList(data.list);
+          console.log(data)
         }
       } catch (err) {
         setError('Ocurrio un error inesperado');
@@ -57,14 +58,16 @@ export default function Main({categoryMenu, media}) {
         {list && list.results.map((element) => {
               return <Card
                   id={element.id}
+                  media={media}
                   key={element.id}
-                  poster={element.poster_path} 
+                  poster={element.profile_path || element.poster_path} 
                   title={element.name || element.title}
                   release={element.release_date || element.first_air_date}
                   runtime={element.runtime}
                   overview={element.overview}
                   votes={element.vote_average}
                   votes_count={element.vote_count}
+                  known_for={element.known_for}
               />
           })
         }

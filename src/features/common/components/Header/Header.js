@@ -30,6 +30,7 @@ export default function Header() {
                 <li><Link href="/" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Inicio</Link></li>
                 <li><Link href="/movie/list" className="sidebar__items" data-link='movie' onClick={() => setIsOpen(!isOpen)}>Películas</Link></li>
                 <li><Link href="/tv/list" className="sidebar__items" data-link='tv' onClick={() => setIsOpen(!isOpen)}>Series</Link></li>
+                <li><Link href="/person/list" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Gente</Link></li>
                 <li><Link href="/acerca-de" className="sidebar__items" onClick={() => setIsOpen(!isOpen)}>Acerca de</Link></li>
             </ul>
         </div>
@@ -49,6 +50,11 @@ export default function Header() {
                 className="menu__items" 
                 data-link='tv' 
                 >Series
+            </Link>
+            <Link href="/person/list" 
+                className="menu__items" 
+                data-link='person' 
+                >Gente
             </Link>
             <Link href="/acerca-de"
                 className="menu__items"
