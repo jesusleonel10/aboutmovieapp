@@ -1,6 +1,5 @@
 import { fetchData } from '@/lib/data';
 import MovieTVShow from '@/features/info/components/MovieTVShow/MovieTVShow';
-import '@/styles/info.scss';
 
 //Funcion para realizar la consulta, esto se hace en el servidor
 async function fetchDetails(url) {
