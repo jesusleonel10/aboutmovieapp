@@ -32,7 +32,7 @@ export default function ItemList({id, title, poster, media, year, character, fro
               {character && <p className="character">Personaje: <span>{character}</span></p>}
           </div>
           {from === 'results' ? 
-              typeItem.filter((item) => item.type === mediaType)
+              typeItem.filter((item) => item.type === media)
               .map((element, index) => {
                   return <span className="item-list__media" key={index} >{element.valor}</span> 
               })

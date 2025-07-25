@@ -1,19 +1,17 @@
 "use client"
-
 import { useState, useEffect } from "react";
-import Modal from "@/features/common/components/Modal/Modal";
+import { useRouter } from "next/navigation";
 import InfinitePosters from "@/features/search/components/InfinitePosters/InfinitePosters";
 import Poster from "@/features/search/components/Poster/Poster";
 import './Search.scss'
 
 export default function Search({trending}) {
 
-  const [modal, setModal] = useState(false);
-
   const [randomValue, setRandomValue] = useState(0);
   const [shuffleValue, setshuffleValue] = useState([]);
-  //Definir el value de lo que se escribe en el input text para hacer la busqueda
+  //Capturamos lo escrito en el input
   const [inputSearch, setInputSearch] = useState('');
+  const router = useRouter();
 
   const propsAnimationPosters = {
     image_per_row: 7,
@@ -33,14 +31,18 @@ export default function Search({trending}) {
     }
   }, [trending]);
 
-const handleChange = (setState) => (event) => {
-  setState(event.target.value)
-}
+  const handleSearch = (e) => {
+    e.preventDefault()
 
-const handleClick = (e) => {
-  e.preventDefault()
-  inputSearch && setModal(true);
-}
+    if (inputSearch.trim()) {
+      router.push(`/search?query=${encodeURIComponent(inputSearch.trim())}`);
+    }
+
+    else {
+      alert('Por favor, ingresa algo para buscar...');
+    }
+    
+  }
 
   return (
     <>   
@@ -59,9 +61,9 @@ const handleClick = (e) => {
                           placeholder="Escribe alguna película, serie o celebridad" 
                           required="required"
                           value={inputSearch}
-                          onChange={handleChange(setInputSearch)}
+                          onChange={(e) => setInputSearch(e.target.value)}
                       />
-                      <input type="submit" value="Buscar" onClick={(e) => handleClick(e)} />
+                      <input type="submit" value="Buscar" onClick={(e) => handleSearch(e)} />
               </form>
           </div>
           <div className='search-container__items-scrolling items-scrolling-infinite-list'>
@@ -75,16 +77,6 @@ const handleClick = (e) => {
               ))}
           </div>
       </div>
-          
-      {//Al cambiar el type cambio el componente dentro de modal
-      modal &&
-      <Modal header='Buscar Película o Serie de TV' modal={modal} setModal={setModal}>
-          {/* <ResultsList 
-              inputSearch={inputSearch}
-              setInputSearch={setInputSearch}
-          /> */}
-      </Modal>
-      }
     </>
   )
 }
