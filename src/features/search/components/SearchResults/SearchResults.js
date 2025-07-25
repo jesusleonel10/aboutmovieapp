@@ -59,13 +59,16 @@ export default function SearchResults({query, data}) {
       newSearchParamas.set('query', inputSearch);
       //Redireccionamos a la nueva ruta
       router.push(`?${newSearchParamas.toString()}`);
+      setPage(1);
       setEmpty(false);
   }
+
+  console.log(listQuery)
   
   return (
           <div className="container-modal__search">
               <div className="input">
-                  <form action="" >
+                  <form>
                       <label className='hidden-visually' htmlFor="search">Buscar</label>
                       <input 
                           id="search" 

@@ -31,7 +31,7 @@ export default async function PersonInfo({params}) {
   const data = await fetchDetails(`/person/${personId}?language=en-US`);
   const credits = await fetchDetails(`/person/${personId}/combined_credits?language=es-MX`);
   const creditsFilter = filterResults(credits.cast);
-
+  
   return (
     <div className="container-modal">
       <People data={data} creditsFilter={creditsFilter} />

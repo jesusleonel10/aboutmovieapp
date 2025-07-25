@@ -1,6 +1,5 @@
 import { fetchData } from '@/lib/data';
 import MovieTVShow from '@/features/info/components/MovieTVShow/MovieTVShow';
-import '@/styles/info.scss'
 
 async function fetchDetails(url) {
   try {

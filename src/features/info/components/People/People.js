@@ -35,8 +35,6 @@ export default function People({data, creditsFilter}) {
     }
   }, [value]);
     
-  console.log(data)
-
   return (
     <div className="container-modal__content">
         <div className='poster'>
@@ -78,7 +76,7 @@ export default function People({data, creditsFilter}) {
             </div>
         </div>
         <div className="filmography">
-          <h2 className="filmography__title">Películas y Series</h2>
+          <h2 className="filmography__title">Participó en:</h2>
           <div className="filmography__list">
             <Box  sx={{ width: '100%' }} >
               <Box sx={{ borderBottom: 1, borderColor: 'divider'}} >

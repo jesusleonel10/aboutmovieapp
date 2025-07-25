@@ -9,7 +9,7 @@ export default function ItemList({id, title, poster, media, year, character, fro
     const typeItem = [
         { id: 0, type: 'movie',  valor: 'Película'},
         { id: 1, type: 'tv',  valor: 'Serie de TV'},                  
-        { id: 2, type: 'person',  valor: 'Persona'}          
+        { id: 2, type: 'person',  valor: ''}          
     ]
 
   return (

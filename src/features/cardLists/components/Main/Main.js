@@ -29,7 +29,6 @@ export default function Main({categoryMenu, media}) {
           setError(data.error);
         } else {
           setList(data.list);
-          console.log(data)
         }
       } catch (err) {
         setError('Ocurrio un error inesperado');
