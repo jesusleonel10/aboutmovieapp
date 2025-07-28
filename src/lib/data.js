@@ -3,7 +3,6 @@ import api from "./axios";
 export async function fetchData(path) {
   try {
     const response = await api.get(path);
-    console.log(path)
     return response.data;
 
   } catch (error) {
