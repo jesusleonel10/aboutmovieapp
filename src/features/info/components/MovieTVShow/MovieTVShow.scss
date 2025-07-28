@@ -9,8 +9,12 @@
     padding: 1.25rem;
   
     .poster {
-      max-width: 20rem;
       justify-self: center;
+      img {
+        width: 100%;
+        object-fit: contain;
+        vertical-align: top;
+      }
     }
     @media (max-width: 768px) {
       font-size: 14px;

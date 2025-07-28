@@ -16,9 +16,8 @@ export default function MovieTVShow({data, media, dataCredits, dataProviders}) {
               <Image 
                 src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
                 alt="Poster de la pelicula o serie de TV"
-                width={320}
-                height={480}
-                quality={75}
+                width={384}
+                height={576}
                 priority={true}
               />
             </div>

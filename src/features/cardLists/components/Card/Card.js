@@ -18,8 +18,8 @@ export default function Card({id, media, poster, title, votes, votes_count, rele
                   <Image 
                     alt="Poster de la pelicula, serie de tv o fotografia de la persona" 
                     src={`https://image.tmdb.org/t/p/w500/${poster}`}
-                    width={300}
-                    height={400}
+                    width={384}
+                    height={576}
                     priority={true}
                   />
               </div>

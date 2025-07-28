@@ -2,7 +2,6 @@ import ScrollingWidget from "@/features/info/components/ScrollingWidget/Scrollin
 import CardProfile from "@/features/info/components/CardProfile/CardProfile";
 
 export default function Credits({credits, media}) {
-  console.log(credits.crew)
   return (
     <>
       <div className="credits">

@@ -41,9 +41,8 @@ export default function People({data, creditsFilter}) {
           <Image 
             src={`https://image.tmdb.org/t/p/w500/${data.profile_path}`}
             alt="Foto de la persona"
-            width={320}
-            height={480}
-            quality={75}
+            width={384}
+            height={576}
             priority={true}
           />
         </div>

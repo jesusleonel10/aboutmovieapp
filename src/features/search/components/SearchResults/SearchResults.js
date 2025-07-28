@@ -63,8 +63,6 @@ export default function SearchResults({query, data}) {
       setEmpty(false);
   }
 
-  console.log(listQuery)
-  
   return (
           <div className="container-modal__search">
               <div className="input">
