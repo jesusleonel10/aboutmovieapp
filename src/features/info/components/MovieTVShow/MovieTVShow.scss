@@ -1,6 +1,6 @@
 .container-modal__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: 2rem;
     margin: 1rem;
     background: #fff;
@@ -24,8 +24,8 @@
         display: flex;
         flex-direction: column;
         justify-self: center;
-        // max-width: 25rem;
         gap: .5rem;
+        color: #212121;
         .title {
             display: flex;
             flex-direction: column;
@@ -47,7 +47,7 @@
     }
     .widgets {
         width: 100%;
-        @media (min-width: 744px) and (max-width: 1096px) {
+        @media (min-width: 648px) and (max-width: 952px) {
             grid-column-start: 1;
             grid-column-end: -1;
         }

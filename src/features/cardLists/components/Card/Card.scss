@@ -70,6 +70,7 @@
     h1 {
         font-size: 1.2em;
         margin-bottom: 5px;
+        color: #fff;
     }
 
     h2 {
@@ -77,6 +78,13 @@
         font-size: 1em;
         margin-bottom: 10px;
         opacity: .6;
+        color: #fff;
+    }
+
+    ul {
+        li {
+            color: #fff;
+        }
     }
 
     &__rating {
@@ -85,11 +93,17 @@
         justify-content: space-between;
         margin-bottom: 10px;
         font-size: .8em;
+        span {
+            color: #fff;
+        }
         .emoji_number {
             font-size: 1.5em;
             font-weight: bold;
             svg {
                 margin-right: 5px;
+            }
+            span {
+                color: #fff;
             }
         }
 
@@ -102,6 +116,7 @@
         overflow: hidden;
         font-size: .8em;
         opacity: .8;
+        color: #fff;
     }
 
     li {

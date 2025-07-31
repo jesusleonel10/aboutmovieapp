@@ -21,16 +21,23 @@
   &__title {
     font-size: 1em;
     font-weight: 500;
+    p {
+      color: #212121;
+    }
     .character {
       font-size: .8rem;
       font-weight: 500;
+      color: #212121;
       span {
+        color: #585858;
         font-weight: 300;
       }
     }
   }
   &__media {
     font-style: italic;
+    color: #212121;
+
   }
   &__year {
     margin-left: auto;

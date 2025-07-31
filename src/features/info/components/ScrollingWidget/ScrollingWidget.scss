@@ -125,6 +125,10 @@
     width: 100%;
     flex-direction: row;
     overflow: auto;
+    
+    span {
+      color: #212121;
+    }
   }
   
   ::-webkit-scrollbar {

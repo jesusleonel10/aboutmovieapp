@@ -24,8 +24,9 @@
     .details {
         display: flex;
         flex-direction: column;
-        // max-width: 25rem;
         gap: .5rem;
+        color: #212121;
+
         .title {
             display: flex;
             flex-direction: column;
@@ -48,12 +49,13 @@
 
     .filmography {
         width: 100%;
-        @media (min-width: 744px) and (max-width: 1096px) {
+        @media (min-width: 648px) and (max-width: 952px) {
             grid-column-start: 1;
             grid-column-end: -1;
         }
         &__title {
             margin-bottom: .7rem;
+            color: #212121;
         }
         &__list {
             position: relative;
@@ -68,8 +70,9 @@
                 // max-height: 23rem;
                 overflow: hidden;
                 overflow-y: scroll;
+
                 li:nth-child(even) {
-                background-color: #f0f0f0;
+                    background-color: #f0f0f0;
                 }
             }
         }

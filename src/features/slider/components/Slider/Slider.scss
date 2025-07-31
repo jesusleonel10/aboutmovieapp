@@ -107,10 +107,12 @@
           font-family: 'Josefin Sans', sans-serif;
           font-weight: 300;
           text-transform: uppercase;
+          color: #fff;
         }
       
         p {
           display: -webkit-box;
+          color: #fff;
           -webkit-line-clamp: 12;
           -webkit-box-orient: vertical;
           overflow: hidden;
