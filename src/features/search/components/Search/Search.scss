@@ -59,8 +59,9 @@
       
       input {
         &[type=text] {
+          color: #212121;
           border: none;
-          background-color: #fff;
+          background-color: #fff; 
           width: 80%;
           height: 3rem;
           font-size: 1.2rem;
